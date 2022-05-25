@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Bar do Noma</title>
+  <link rel="shortcut icon" href="img/flamengo.ico">
+</head>
+<body>
+
+  <div class="back">
+    <form>
+      <h3>Preencha o Formulário</h3>
+      <label>Nome Completo</label>
+      <input type="text" id="inName"   placeholder="Seu nome">
+      <label>Data Nascimento</label>
+      <input type="date" id="inBirth"  placeholder="Data de Nascimento">
+      <label>Cidade</label>
+      <input type="text" id="inField"  placeholder="Nacionalidade">
+      <label>Ano de Expedição</label>
+      <input type="number" id="inYear" placeholder="Ano"> 
+      <label for="file" class="upload">Insira uma Foto</label>
+      <br>
+      <span>Envie uma foto sua com fundo branco</span>
+      <input type="file" id="file" accept="image/*" onchange="loadImage(event)">
+    </form>
+      <button type="submit" id="preview">Preview</button>
+
+
+    <div class="container">
+      <canvas id="result" class="card">
+
+        <header id="head">
+          <div class="camp">
+            <h4>Bar Do Noma</h4>
+            <span>Sócio</span>
+          </div>
+          <img src="img/flamengo.png" id="logo">
+        </header>
+
+        <div class="content">
+          <img src="" id="imgDisplayed">
+            <ul>
+            <li id="name"></li>
+            <li id="birth"></li>
+            <li id="fieldYear"></li>
+            <li>SubN°:<span id="num"></span></li>
+          </ul>
+        </div>
+
+    </canvas>
+    <button id="down">Download</button>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
